@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="order.export" template="SwiftOtter_OrderExport::export-view.phtml">
+                <arguments>
+                    <argument name="detalles" xsi:type="object">SwiftOtter\OrderExport\ViewModel\OrderDetalles</argument>
+                </arguments>
+            </block>
+
+            <block name="order.export.status" template="SwiftOtter_OrderExport::status.phtml" after="order.export">
+                <arguments>
+                    <argument name="detalles" xsi:type="object">SwiftOtter\OrderExport\ViewModel\HasBeenExported</argument>
+                </arguments>
+
+            </block>
+        </referenceContainer>
+
+    </body>
+</page>
+

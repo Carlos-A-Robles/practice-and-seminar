@@ -1,0 +1,16 @@
+<?php
+declare(strict_types=1);
+
+
+
+/** @var  $block Magento\Framework\View\Element\Template */
+/** @var $view SwiftOtter\OrderExport\ViewModel\HasBeenExported */
+$view = $block->getData('detalles');
+?>
+
+
+
+<section class="order-export-status admin__page-section">
+    <h3><?php echo 'This has been exported'?></h3>
+</section>
+
